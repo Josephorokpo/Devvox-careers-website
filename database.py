@@ -1,10 +1,10 @@
 from sqlalchemy import create_engine, text
 import os
 
-dbase_connection_string =  os.environ['db_connection_string']
+db_connection_string =  os.environ['db_connection_string']
 
 engine = create_engine(
-  dbase_connection_string,
+  db_connection_string,
   connect_args={
     "ssl": {
       "ssl_ca": "/etc/ssl/cert.pem"
