@@ -41,8 +41,5 @@ def apply_to_job(id):
                          application=data,
                          job=job)
 
-
-=======
->>>>>>> 4c1d4e9 (update app.py & database.py)
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
