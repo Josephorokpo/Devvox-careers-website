@@ -26,6 +26,7 @@ def load_job_from_db(id):
     if len(rows) == 0:
       return None
     else:
+<<<<<<< HEAD
       return dict(zip(result.keys(), rows[0]))
 
 
@@ -43,3 +44,6 @@ def add_application_to_db(job_id, data):
                  education=data['education'],
                  work_experience=data['work_experience'],
                  resume_url=data['resume_url'])
+=======
+      return dict(rows[0])
+>>>>>>> 4c1d4e9 (update app.py & database.py)
