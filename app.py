@@ -26,7 +26,6 @@ def show_job(id):
   return render_template('jobpage.html', job=job)
 
 
-<<<<<<< HEAD
 @app.route("/api/job/<id>")
 def show_job_json(id):
   job = load_job_from_db(id)
