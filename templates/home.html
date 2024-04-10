@@ -1,3 +1,4 @@
+<!-- Defines the document type and version of HTML -->
 <!DOCTYPE html>
 
 <!-- Start of HTML document with language set to English -->
@@ -17,35 +18,45 @@
   <!-- Start of the body section -->
   <body>
 
-    <!-- Navigation bar -->
+    <!-- Includes the navigation bar -->
     {% include 'nav.html' %}
 
-    <!-- Banner -->
+    <!-- Includes the banner -->
     {% include 'banner.html' %}
 
+    <!-- Start of the main container -->
     <div class="container">
 
+      <!-- Page heading -->
       <h1 class="text-center mt-2 mb-4">Devvox Careers</h1>
 
+      <!-- Start of the row -->
       <div class="row" style="margin-bottom: 16px">
 
+        <!-- Start of the first column -->
         <div class="col-md-6">
 
           <!-- Introduction text -->
           <p class="lead">
+            Devvox Careers is your go-to platform for uniting talented professional exciting tech opportunities in backend engineering, frontend engineering, data analysis, and science. Serving as a central hub for both job seekers and employers, we facilitate seamless connections and offer a wide array of tailored job listings. Whether you're seeking remote or onsite work, we prioritize diversity, inclusion, and professional growth to ensure every candidate finds their perfect match. Join us at Devvox Careers to kickstart your journey towards your dream job.
           </p>
 
         </div>
 
-        <!-- Image of workers -->
+        <!-- Start of the second column -->
         <div class="d-none d-md-block col-md-6">
+
+          <!-- Image of workers -->
           <img src="/static/workers.jpg" style="height: 320px; border-radius: 4px;">
+
         </div>
-        
+
       </div>
 
+      <!-- Heading for job openings -->
       <h2 class="text-center mt-2 mb-4">Job Openings</h2>
 
+      <!-- Start of the job listings -->
       <div>
 
         <!-- Loop through each job in the jobs list -->
@@ -57,20 +68,17 @@
         {% endfor %}
 
       </div>
-      
+
+      <!-- Contact Us button -->
       <div class="text-center">
-
-        <!-- Contact Us button -->
         <button class="btn btn-primary btn-lg">Contact Us</button>
-
       </div>
 
     </div>
 
-    <!-- Footer -->
+    <!-- Includes the footer -->
     {% include 'footer.html' %}
 
   </body>
 
 </html>
-
