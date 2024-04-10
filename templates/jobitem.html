@@ -1,16 +1,33 @@
+<!-- Start of a job item, styled with a bottom border and padding -->
 <div class="mb-4 border-bottom row" style="padding-bottom: 8px;">
+
+  <!-- Start of the main content section for the job item -->
   <div class="col-10">
+
+    <!-- Job title, styled with a specific color -->
     <h4 style="color:rgb(120, 120, 120)">{{job['title']}}</h4>
+
+    <!-- Job location -->
     <div>
       <b>Location</b>: {{job['location']}}
     </div>
+
+    <!-- Conditional block that displays the salary if it exists in the job data -->
     {% if 'salary' in job %}
     <div>
       <b>Salary</b>: {{job['salary']}}
     </div>
     {% endif %}
+
   </div>
+
+  <!-- Start of the apply button section -->
   <div class="col-2 padding-right:16px">
+
+    <!-- Apply button, which links to the job's individual page -->
     <a href="/job/{{job['id']}}" type="button" class="btn btn-outline-primary">Apply</a>
+
   </div>
+
 </div>
+<!-- End of the job item -->
