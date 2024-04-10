@@ -1,0 +1,45 @@
+<!-- The heading of the application form -->
+<h4>Application Form</h4>
+
+<!-- The form starts here. When submitted, it sends a POST request to the URL specified in the action attribute -->
+<form action="/job/{{job['id']}}/apply" method="post">
+
+  <!-- A field for the applicant to enter their full name -->
+  <div class="mb-2">
+    <label>Full Name</label><br>
+    <input type="text" required name="full_name" placeholder="John Doe">
+  </div>
+
+  <!-- A field for the applicant to enter their email -->
+  <div class="mb-2">
+    <label>Email</label><br>
+    <input type="email" required name="email" placeholder="johndoe@example.com">
+  </div>
+
+  <!-- A field for the applicant to enter their LinkedIn URL -->
+  <div class="mb-2">
+    <label>LinkedIn URL</label><br>
+    <input type="url" name="linkedin_url" placeholder="https://linked.com/in/johndoe">
+  </div>
+
+  <!-- A field for the applicant to enter their education details -->
+  <div class="mb-2">
+    <label>Education</label><br>
+    <textarea name="education"></textarea>
+  </div>
+
+  <!-- A field for the applicant to enter their work experience -->
+  <div class="mb-2">
+    <label>Work Experience</label><br>
+    <textarea name="work_experience"></textarea>
+  </div>
+
+  <!-- A field for the applicant to enter the URL of their resume -->
+  <div class="mb-2">
+    <label>Resume URL</label><br>
+    <input type="url" name="resume_url">
+  </div>
+
+  <!-- The submit button for the form -->
+  <input type="submit">
+</form>
