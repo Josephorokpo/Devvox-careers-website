@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- The title of the webpage -->
+    <title>Application Submitted</title>  
+    <!-- Including Bootstrap for styling -->
+    {% include 'bootstrap.html' %}
+  </head>
+  <body>
+    <!-- Including the navigation bar -->
+    {% include 'nav.html' %}
+    <!-- Including the banner -->
+    {% include 'banner.html' %}
+
+    <div class="container">
+      <!-- The main heading of the page -->
+      <h1 class="text-center mt-2 mb-4">
+        Devvox Careers
+      </h1>
+
+      <!-- A message to the user indicating their application has been submitted -->
+      <p>Your application for the role of <b>{{job['title']}}</b> at Devvox has been submitted!</p>
+
+      <!-- Displaying the full name of the applicant -->
+      <b>Full Name</b>
+      <div class="mb-2">{{application['full_name']}}</div>
+
+      <!-- Displaying the email of the applicant -->
+      <b>Email</b>
+      <div class="mb-2">{{application['email']}}</div>
+
+      <!-- Displaying the LinkedIn URL of the applicant -->
+      <b>LinkedIn URL</b>
+      <div class="mb-2">{{application['linkedin_url']}}</div>
+
+      <!-- Displaying the education details of the applicant -->
+      <b>Education</b>
+      <div class="mb-2">{{application['education']}}</div>
+
+      <!-- Displaying the work experience of the applicant -->
+      <b>Work Experience</b>
+      <div class="mb-2">{{application['work_experience']}}</div>
+
+      <!-- Displaying the URL of the applicant's resume -->
+      <b>Resume URL</b>
+      <div class="mb-2">{{application['resume_url']}}</div>
+    </div>
+    <!-- Including the footer -->
+    {% include 'footer.html' %}
+  </body>
+</html>
