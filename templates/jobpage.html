@@ -1,23 +1,68 @@
+<!-- Defines the document type and version of HTML -->
 <!DOCTYPE html>
+
 <html>
+
   <head>
+    <!-- Sets the title of the webpage to the job title -->
     <title>{{ job.title }} - Devvox Careers</title>
-     {% include 'bootstrap.html' %}
+
+    <!-- Includes Bootstrap CSS -->
+    {% include 'bootstrap.html' %}
   </head>
+
   <body>
+
+    <!-- Includes the navigation bar -->
     {% include 'nav.html' %}
+
+    <!-- Includes the banner -->
     {% include 'banner.html' %}
+
     <div class="container">
+
+      <!-- Page heading -->
       <h1 class="text-center mt-2 mb-4">Devvox Careers</h1>
+
+      <!-- Job title -->
       <h4 class="mb-2">{{ job.title }}</h4>
+
+      <!-- Job location -->
       <p class="lead">{{ job.location }}</p>
+      
+      <!-- Job responsibilities section -->
       <h4>Responsibility</h4>
-      <p>{{ job.responsibility }}</p>
+      <ul>
+        <!-- Loop through each responsibility sentence and display it as a list item -->
+        {% for sentence in job.responsibility.split('.') %}
+          {% if sentence.strip() != '' %}
+            <li>{{ sentence }}</li> 
+          {% endif %}
+        {% endfor %}
+      </ul>
+           
+      <!-- Job requirements section -->
       <h4>Requirements</h4>
-      <p>{{ job.requirements }}</p>
+      <ol>
+        <!-- Loop through each requirement sentence and display it as a list item -->
+        {% for sentence in job.requirements.split('.') %}
+          {% if sentence.strip() != '' %}
+            <li>{{ sentence }}</li> 
+          {% endif %}
+        {% endfor %}
+      </ol>
+     
+      <!-- Job salary section -->
       <h4>Salary</h4>
       <p>{{ job.currency }}{{ job.salary }}</p>
+
+      <!-- Includes the application form -->
+      {% include 'application_form.html' %}
     </div> 
-     {% include 'footer.html' %}
+
+    <!-- Includes the footer -->
+    {% include 'footer.html' %}
   </body>
+
 </html>
+
