@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Define the route for the homepage
 @app.route("/")
-def hello_devvo():
+def hello_devvox():
   # Load jobs from the database
   jobs = load_jobs_from_db()
   # Render the home page template with the jobs data
@@ -55,6 +55,9 @@ def apply_to_job(id):
   return render_template('application_submitted.html', 
                          application=data,
                          job=job)
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 # Run the application
 if __name__ == '__main__':
