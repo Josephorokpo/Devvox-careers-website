@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- The title of the webpage -->
+    <title>About Us</title>  
+    <!-- Including Bootstrap for styling -->
+    {% include 'bootstrap.html' %}
+  </head>
+  <body>
+    <!-- Including the navigation bar -->
+    {% include 'nav.html' %}
+    <!-- Including the banner -->
+    {% include 'banner.html' %}
+
+     <div class="container">
+        <!-- Main content -->
+        <h1 class="text-center mt-4">About Us</h1>
+        <p class="lead text-center">Welcome to our about page! Meet the team behind Devvox Careers.</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Joseph Orokpo</h2>
+                <p>Joseph Orokpo is a student of the Software Engineering (SE) programme by ALX Africa, a twelve-month intensive software engineering programme. He is passionate about using technology to solve real-world problems.</p>
+                <p>Connect with Joseph Orokpo:</p>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.linkedin.com/in/joseph-orokpo-8526609b" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://twitter.com/joe_orokpo" target="_blank">Twitter</a></li>
+                    <li><a href="https://github.com/Josephorokpo" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2>Burhanuddeen Abdullahi</h2>
+                <p>Burhanuddeen Abdullahi is also a student of the Software Engineering (SE) programme by ALX Africa. He is passionate about building innovative solutions and making a positive impact in the tech industry.</p>
+                <p>Connect with Burhanuddeen Abdullahi:</p>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.linkedin.com/in/burhanuddeen-abdullahi-7a1418210" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://twitter.com/joe_orokpo" target="_blank">Twitter</a></li>
+                    <li><a href="https://github.com/Josephorokpo" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Including the footer -->
+    {% include 'footer.html' %}
+</body>
+</html>
