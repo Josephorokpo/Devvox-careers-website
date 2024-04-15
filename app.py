@@ -54,10 +54,18 @@ def apply_to_job(id):
   # Render the application submitted page with the application and job data
   return render_template('application_submitted.html', 
                          application=data,
+
                          job=job)
+  
+# Render the about page template
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+# Render the contact page template
+@app.route('/contact')
+def contact():
+    return render_template('contact_us.html')
 
 # Run the application
 if __name__ == '__main__':
